@@ -20,7 +20,7 @@ export default {
   return { teamsStore }
   }
 }
-
+console.log(123)
 </script>
 
 <style scoped>
