@@ -1,13 +1,11 @@
 <template>
     <div class="brawl-tournament-nav">
-        <img src="../assets/brawlLogo.png" alt="">
+        <img class="icon" src="@/assets/img/brawlLogo.png">
         <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li> <router-link to="/teams">Teams</router-link></li>
-            <li>Raiting</li>
-            <li>Rules</li>
-            <li>Registration</li>
-            <!-- <router-view></router-view> -->
+            <li><router-link class="link" to="/">Home</router-link></li>
+            <li><router-link class="link" to="/teams">Teams</router-link></li>
+            <li class="disabled">Raiting</li>
+            <li><router-link class="link" to="/registration">Registration</router-link></li>
         </ul>
     </div>
 </template>
@@ -24,7 +22,7 @@
 }
 .brawl-tournament-nav {
     display: flex;
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(0, 0, 0);
     color: white;
     justify-content: center;
     justify-content: space-between;
@@ -40,6 +38,7 @@ li {
     float: left;
     padding: 10px;
     font-size: 30px;
+    height: 100%;
 }
 .icon {
     width: 60px;
@@ -48,5 +47,12 @@ li {
     padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+.link {
+    color: white;
+    text-decoration:double;
+}
+li:hover {
+    background-color: gray
 }
 </style>

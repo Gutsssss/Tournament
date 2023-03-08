@@ -1,46 +1,48 @@
 <template>
-    <div class="brawl-tournament-rules">
+  <div class="brawl-tournament-rules">
     <h1>Rules</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae perspiciatis laboriosam necessitatibus quos dolor quaerat, quis doloribus asperiores ratione? Quod similique culpa, optio deleniti delectus quisquam ipsum quo odio unde!</p>
-    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+      perspiciatis laboriosam necessitatibus quos dolor quaerat, quis doloribus
+      asperiores ratione? Quod similique culpa, optio deleniti delectus quisquam
+      ipsum quo odio unde!
+    </p>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
 <style scoped>
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .brawl-tournament-rules {
-    background-image: 
-    linear-gradient(rgba(70, 69, 69, 0.7), rgba(0, 0, 0, 0.8)),
-    url(@/assets/background.jpeg);
-    width: 100%;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
+  background-image: linear-gradient(rgba(70, 69, 69, 0.7), rgba(0, 0, 0, 0.8)),
+    url(@/assets/img/background.jpeg);
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* padding-bottom: 20px; */
 }
 h1 {
-    color: white;
-    font-size: 70px;
+  color: white;
+  font-size: 70px;
 }
 p {
-    margin: 0;
-    width: 50%;
-    text-align: center;
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-    font-weight: 700;
+  margin: 0;
+  width: 50%;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
 }
 </style>

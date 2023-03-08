@@ -28,7 +28,7 @@ const teamsStore = useTeamsStore()
     align-items: center;
     margin: 10px;
     border-radius: 5px;
-    background-image: url(@/assets/wallBrawl.png);
+    background-image: url(@/assets/img/wallBrawl.png);
     background-size: 200px;
 }
 p {

@@ -5,12 +5,14 @@
       perspiciatis libero dolorem officiis deleniti odio. Numquam voluptatum beatae
       tempore perferendis cupiditate obcaecati veritatis maxime saepe sint?
     </p>
-    <img src="@/assets/hero.png" alt="" />
+    <img class="img" src="@/assets/img/hero.png"/>
   </div>
 </template>
 
 <script>
-export default {};
+
+export default {
+};
 </script>
 
 <style scoped>

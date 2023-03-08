@@ -1,4 +1,5 @@
 <template>
+    <BrawlTournamentNav/>
     <div class="brawl-tournament-registration">
     <h1>Registation</h1>
     <div class="brawl-tournament-registration-form">
@@ -8,12 +9,16 @@
         <button @click="addTeam">Submit</button>
     </div>
     </div>
+    <BrawlTournamentFooter/>
 </template>
 
 <script>
 import { useTeamsStore } from '@/stores/teamsStore';
+import BrawlTournamentNav from './BrawlTournamentNav.vue';
+import BrawlTournamentFooter from './BrawlTournamentFooter.vue';
 
     export default {
+        components: {BrawlTournamentNav,BrawlTournamentFooter},
         setup() {
             const teamsStore = useTeamsStore()
 
@@ -43,18 +48,18 @@ import { useTeamsStore } from '@/stores/teamsStore';
 .brawl-tournament-registration {
     background: rgb(236, 75, 102);
     width: 100%;
-    height: 600px;
+    height: 900px;
     display: flex;
     justify-content: center;
     padding-top: 20px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around
 }
 h1 {
     margin: 0;
     color: white;
-    font-size: 70px;
+    font-size: 140px;
+    padding-bottom: 40px;
 }
 .brawl-tournament-registration-form {
     display: flex;
