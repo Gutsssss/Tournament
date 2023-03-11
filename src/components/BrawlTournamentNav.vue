@@ -1,6 +1,6 @@
 <template>
     <div class="brawl-tournament-nav">
-        <img class="icon" src="@/assets/img/brawlLogo.png">
+        <img class="icon" src="@/assets/BrawlStarsLogo.webp">
         <ul>
             <li><router-link class="link" to="/">Home</router-link></li>
             <li><router-link class="link" to="/teams">Teams</router-link></li>
@@ -11,9 +11,6 @@
 </template>
 
 <script>
-    export default {
-        
-    }
 </script>
 
 <style scoped>

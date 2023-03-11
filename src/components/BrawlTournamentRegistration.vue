@@ -44,6 +44,7 @@ import BrawlTournamentFooter from './BrawlTournamentFooter.vue';
 <style scoped>
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }
 .brawl-tournament-registration {
     background: rgb(236, 75, 102);
@@ -84,6 +85,7 @@ button {
     border-radius: 10px;
     background:rgb(236, 75, 102);
     cursor: pointer;
+    color: white;
 }
 button:hover {
     background:rgb(77, 18, 28) ;

@@ -20,7 +20,7 @@ export default {};
 }
 .brawl-tournament-rules {
   background-image: linear-gradient(rgba(70, 69, 69, 0.7), rgba(0, 0, 0, 0.8)),
-    url(@/assets/img/background.jpeg);
+    url(@/assets/background.jpeg);
   width: 100%;
   height: 900px;
   display: flex;

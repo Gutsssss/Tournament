@@ -30,7 +30,7 @@ const teamsStore = useTeamsStore();
 .brawl-tournamenst-teams {
   width: 100%;
   height: 900px;
-  background: rgb(214, 131, 131);
+  background: rgb(236, 75, 102);
   overflow: auto;
   scrollbar-color: black;
 }
