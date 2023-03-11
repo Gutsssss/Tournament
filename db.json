@@ -1,10 +1,6 @@
 {
   "teams": [
-    {"id":1,
-     "teamName": "NaVi",
-      "captainName": "Simple"},
-    {"id":2,
-     "teamName": "VP",
-      "captainName": "S0mple"}
+    { "id": 1, "teamName": "NaVi", "captainName": "Simple" },
+    { "id": 2, "teamName": "VP", "captainName": "S0mple" }
   ]
 }

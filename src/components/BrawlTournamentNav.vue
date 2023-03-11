@@ -4,7 +4,7 @@
         <ul>
             <li><router-link class="link" to="/">Home</router-link></li>
             <li><router-link class="link" to="/teams">Teams</router-link></li>
-            <li class="disabled">Raiting</li>
+            <li><router-link class="link" to="/raiting">Raiting</router-link></li>
             <li><router-link class="link" to="/registration">Registration</router-link></li>
         </ul>
     </div>

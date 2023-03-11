@@ -1,14 +1,17 @@
 <template>
     <div class="brawl-tournament-once-team">
-        <p>Team: {{ teams }}</p>
-        <p>Captain: {{ teamsStore.teams.teamName }}</p>
+        <p>Team: {{ team.teamName }}</p>
+        <p>Captain: {{ team.captainName }}</p>
+        <p>Raiting: {{ team.raiting }}</p>
     </div>
 </template>
 
-<script setup>
-import { useTeamsStore } from "@/stores/teamsStore";
+<script>
+export default {
+    props: ['team']
+}
 
-const teamsStore = useTeamsStore()
+
 </script>
 
 <style scoped>
@@ -20,7 +23,7 @@ const teamsStore = useTeamsStore()
 .brawl-tournament-once-team {
     width: 250px;
     border: 2px solid pink;
-    height: 100px;
+    height: 150px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -29,7 +32,7 @@ const teamsStore = useTeamsStore()
     margin: 10px;
     border-radius: 5px;
     background-image: url(@/assets/img/wallBrawl.png);
-    background-size: 200px;
+    background-size: 250px;
 }
 p {
     margin: 0;

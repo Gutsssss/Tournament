@@ -30,12 +30,14 @@ export default {};
   margin-right: 0;
   margin-bottom: 0;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   /* padding-bottom: 20px; */
 }
 h1 {
   color: white;
-  font-size: 70px;
+  font-size: 100px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 p {
   margin: 0;

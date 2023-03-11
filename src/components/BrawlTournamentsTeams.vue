@@ -1,46 +1,48 @@
 <template>
-  <BrawlTournamentNav/>
+  <BrawlTournamentNav />
   <div class="brawl-tournamenst-teams">
-  <h1>Teams</h1>
-    <div class="brawl-tournamenst-teams__list">
-      <BrawlTournamentOnceTeam v-for="team in teamsStore" :key="team.id"/>
-      <p>{{teamsStore.team}}</p>
+    <h1>Teams</h1>
+    <div class="brawl-tournamenst-teams__all-teams">
+      <div
+        class="brawl-tournamenst-teams__list"
+        v-for="team in teamsStore.teams"
+        :key="team.id"
+      >
+        <BrawlTournamentOnceTeam :team="team" />
+      </div>
     </div>
   </div>
-  <BrawlTournamentFooter/>
+  <BrawlTournamentFooter />
 </template>
 
-<script>
-import BrawlTournamentNav from './BrawlTournamentNav'
-import BrawlTournamentOnceTeam from '@/components/BrawlTournamentOnceTeam.vue'
+<script setup>
+import BrawlTournamentNav from "./BrawlTournamentNav";
+import BrawlTournamentOnceTeam from "@/components/BrawlTournamentOnceTeam.vue";
+import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
 import { useTeamsStore } from "@/stores/teamsStore";
-import BrawlTournamentFooter from './BrawlTournamentFooter.vue';
-export default {
-  components: {BrawlTournamentOnceTeam,BrawlTournamentNav,BrawlTournamentFooter},
-  setup () {
-  const teamsStore = useTeamsStore()
-  return { teamsStore }
-  }
-}
-</script>
 
+const teamsStore = useTeamsStore();
+</script>
 <style scoped>
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .brawl-tournamenst-teams {
-    width: 100%;
-    height: 900px;
-    background: rgb(214, 131, 131);
-}
-.brawl-tournamenst-teams__list {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  height: 900px;
+  background: rgb(214, 131, 131);
+  overflow: auto;
+  scrollbar-color: black;
 }
 h1 {
   color: white;
   margin: 0;
   text-align: center;
-  font-size: 48px;
+  font-size: 100px;
+}
+.brawl-tournamenst-teams__all-teams {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 </style>

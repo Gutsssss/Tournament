@@ -58,7 +58,7 @@ import BrawlTournamentFooter from './BrawlTournamentFooter.vue';
 h1 {
     margin: 0;
     color: white;
-    font-size: 140px;
+    font-size: 100px;
     padding-bottom: 40px;
 }
 .brawl-tournament-registration-form {

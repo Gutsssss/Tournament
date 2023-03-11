@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import BrawlTournamentsTeams from "./components/BrawlTournamentsTeams.vue";
 import BrawlTournamentsHome from "./components/BrawlTournamentsHome.vue";
-import BrawlTournamentRegistrationVue from "./components/BrawlTournamentRegistration.vue";
+import BrawlTournamentRegistration from "./components/BrawlTournamentRegistration.vue";
+import BrawlTournamentRaiting from "./components/BrawlTournamentRaiting.vue";
 
 const routes = [
     {
@@ -11,7 +12,10 @@ const routes = [
     path: '/teams', component: BrawlTournamentsTeams
     },
     {
-    path: '/registration', component: BrawlTournamentRegistrationVue
+    path: '/registration', component: BrawlTournamentRegistration
+    },
+    {
+    path: '/raiting', component: BrawlTournamentRaiting
     }
 ]
 
