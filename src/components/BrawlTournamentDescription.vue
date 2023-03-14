@@ -5,7 +5,7 @@
       perspiciatis libero dolorem officiis deleniti odio. Numquam voluptatum beatae
       tempore perferendis cupiditate obcaecati veritatis maxime saepe sint?
     </p>
-    <img class="img" src="@/assets/hero.png" />
+    <img class="img" :src="require('@/assets/hero.png')" />
   </div>
 </template>
 
