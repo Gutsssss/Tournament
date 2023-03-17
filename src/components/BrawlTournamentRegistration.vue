@@ -2,41 +2,37 @@
     <BrawlTournamentNav/>
     <div class="brawl-tournament-registration">
     <h1>Registation</h1>
-    <div class="brawl-tournament-registration-form">
-        <input v-model="captainName" type="text" name="name" placeholder="Captain name">
-        <input v-model="teamName" type="text" name="name" placeholder="Team name">
-        <input v-model="captainsTelegram" type="text" name="name" placeholder="Captain's telegram">
-        <button @click="addTeam">Submit</button>
-    </div>
+    <form class="brawl-tournament-registration-form" @submit.prevent="handleSubmit">
+        <input v-model="newCaptainName" type="text"  placeholder="Captain name">
+        <input v-model="newTeamName" type="text"  placeholder="Team name">
+        <input v-model="newaCptainsTelegram" type="text"  placeholder="Captain's telegram">
+        <button>Submit</button>
+    </form>
     </div>
     <BrawlTournamentFooter/>
 </template>
 
-<script>
-import { useTeamsStore } from '@/stores/teamsStore';
+<script setup>
+// import { useTeamsStore } from '@/stores/teamsStore';
 import BrawlTournamentNav from './BrawlTournamentNav.vue';
 import BrawlTournamentFooter from './BrawlTournamentFooter.vue';
+// import { ref } from 'vue';
 
-    export default {
-        components: {BrawlTournamentNav,BrawlTournamentFooter},
-        setup() {
-            const teamsStore = useTeamsStore()
+// const teamsStore = useTeamsStore()
 
-            return {teamsStore}
-        },
-        data() {
-            return {
-                captainName: "",
-                teamName: "",
-                captainsTelegram: ""
-            }
-        },
-        methods: {
-            addTeam() {
-                
-            }
-        }
-    }
+// newCaptainName = ref('')
+
+// const handleSubmit = () => {
+//     if (newCaptainName.value.length > 0) {
+//         teamsStore.addTeam({
+//             captainName: newCaptainName.value,
+//             id: Math.floor(Math.random() * 10000),
+//             raiting: 0
+//         })
+//         newCaptainName = ''
+//     }
+//     return {newCaptainName}
+// }
    
     
 </script>

@@ -1,11 +1,10 @@
 <template>
   <div class="brawl-tournament-footer">
-    <h1>Footer</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <a><i class="fa fa-facebook"></i></a>
-    <a><i class="fa fa-instagram"></i></a>
-    <a><i class="fa fa-youtube"></i></a>
-    <a><i class="fa fa-twitter"></i></a>
+  <h1>About</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <a href="https://t.me/BrawlUpCash" target="_blank"><img :src="require('@/assets/telegram.png')"/></a>
+    <a><img :src="require('@/assets/instagram.png')" /></a>
+    <a href="https://vk.com/killypunky" target="_blank"><img :src="require('@/assets/vk.png')" /></a>
   </div>
 </template>
 
@@ -17,10 +16,9 @@
 }
 .brawl-tournament-footer {
   background: #000000;
-  height: 200px;
+  min-height: 150px;
   width: 100%;
   color: white;
-  height: 100px;
   text-align: center;
 }
 h1 {
@@ -28,7 +26,13 @@ h1 {
   font-size: 48px;
   margin: 0;
 }
+img{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
 p {
-  margin: 0;
+  font-size: 24px;
+  margin: 12px;
 }
 </style>

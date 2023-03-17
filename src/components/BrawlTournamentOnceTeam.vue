@@ -16,14 +16,14 @@ export default {
 
 <style scoped>
 * {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
 }
 .brawl-tournament-once-team {
     width: 250px;
-    border: 2px solid pink;
-    height: 150px;
+    border: 2px solid rgb(0, 0, 0);
+    min-height: 150px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ export default {
     align-items: center;
     margin: 10px;
     border-radius: 5px;
-    background-image: url(@/assets/wallBrawl.png);
+    background:lightpink;
     background-size: 250px;
 }
 p {

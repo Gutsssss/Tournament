@@ -31,7 +31,8 @@ export default {};
   margin-bottom: 0;
   flex-direction: column;
   justify-content: center;
-  /* padding-bottom: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
   color: white;

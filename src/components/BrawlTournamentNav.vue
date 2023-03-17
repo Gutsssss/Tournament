@@ -1,6 +1,6 @@
 <template>
   <div class="brawl-tournament-nav">
-    <img class="icon" :src="require('@/assets/BrawlStarsLogo.webp')" />
+    <router-link class="link" to="/"><img class="icon" :src="require('@/assets/iconLog.png')" /></router-link>
     <ul>
       <li><router-link class="link" to="/">Home</router-link></li>
       <li><router-link class="link" to="/teams">Teams</router-link></li>
@@ -22,9 +22,9 @@
   display: flex;
   background-color: rgb(0, 0, 0);
   color: white;
-  /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 ul {
   list-style-type: none;
@@ -32,26 +32,27 @@ ul {
   padding: 0;
   overflow: hidden;
   padding-right: 20px;
+  height: 100px;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 li {
   float: left;
   padding: 10px;
   font-size: 30px;
-  height: 100%;
 }
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   float: left;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding: 15px;
 }
 .link {
   color: white;
   text-decoration: double;
 }
-li:hover {
+/* li:hover {
   background-color: gray;
-}
+} */
 </style>

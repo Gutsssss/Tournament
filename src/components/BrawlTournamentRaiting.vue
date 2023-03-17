@@ -2,7 +2,10 @@
   <BrawlTournamentNav />
   <div class="brawl-tournament-raiting">
     <h1>Raiting</h1>
-    <button>Filtered Teams</button>
+    <div class="brawl-tournament-raiting__buttons">
+      <button @click="sortGreater">Greater filter</button>
+      <button @click="sortLess">Less filter</button>
+    </div>
     <p>There will be a rating of all teams with a rating of more than 500</p>
     <div class="brawl-tournament-raiting__teams">
       <div
@@ -24,6 +27,17 @@ import { useTeamsStore } from "@/stores/teamsStore";
 import BrawlTournamentOnceTeam from "./BrawlTournamentOnceTeam.vue";
 
 const teamsStore = useTeamsStore();
+
+function sortLess() {
+  teamsStore.teams.sort((a, b) => {
+    return a.raiting - b.raiting;
+  });
+}
+function sortGreater() {
+  teamsStore.teams.sort((a, b) => {
+    return b.raiting - a.raiting;
+  });
+}
 </script>
 <style scoped>
 * {
@@ -55,5 +69,23 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.brawl-tournament-raiting__buttons {
+  display: flex;
+}
+button {
+  margin: 15px;
+  background: black;
+  width: 120px;
+  height: 45px;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 18px;
+  border: 1px solid black;
+  text-align: center;
+}
+button:hover {
+  background: gray;
 }
 </style>

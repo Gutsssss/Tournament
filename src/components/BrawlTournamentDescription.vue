@@ -27,11 +27,11 @@
 p {
   margin: 0;
   font-size: 40px;
-  max-width: 440px;
+  max-width: 700px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
 img {
-  width: 400px;
+  width: 800px;
 }
 </style>
