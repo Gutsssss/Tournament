@@ -3,13 +3,17 @@
   <div class="brawl-tournamenst-teams">
     <h1>Teams</h1>
     <div class="brawl-tournamenst-teams__all-teams">
-      <div
+      <!-- <div
         class="brawl-tournamenst-teams__list"
         v-for="team in teamsStore.teams"
         :key="team.id"
       >
         <BrawlTournamentOnceTeam :team="team" />
-      </div>
+      </div> -->
+      <div v-for="team in teamsStore.teams"
+        :key="team.id">
+      <TournamentCard :team="team"/>
+    </div>
     </div>
   </div>
   <BrawlTournamentFooter />
@@ -17,9 +21,10 @@
 
 <script setup>
 import BrawlTournamentNav from "./BrawlTournamentNav";
-import BrawlTournamentOnceTeam from "@/components/BrawlTournamentOnceTeam.vue";
+// import BrawlTournamentOnceTeam from "@/components/BrawlTournamentOnceTeam.vue";
 import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
 import { useTeamsStore } from "@/stores/teamsStore";
+import TournamentCard from "./TournamentCard.vue";
 
 const teamsStore = useTeamsStore();
 </script>
@@ -30,7 +35,7 @@ const teamsStore = useTeamsStore();
 .brawl-tournamenst-teams {
   width: 100%;
   height: 900px;
-  background: rgb(236, 75, 102);
+  background: #7986CB;
   overflow: auto;
   scrollbar-color: black;
 }

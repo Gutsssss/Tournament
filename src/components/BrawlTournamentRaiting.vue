@@ -45,7 +45,7 @@ function sortGreater() {
 }
 .brawl-tournament-raiting {
   text-align: center;
-  background-color: rgb(236, 75, 102);
+  background-color: #7986CB;
   width: 100%;
   min-height: 900px;
   display: flex;
