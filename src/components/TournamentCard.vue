@@ -12,7 +12,6 @@
     <v-expand-transition>
       <div v-show="show">
         <v-divider></v-divider>
-
         <v-card-text>
           Captain: {{ team.captainName }}
           Raiting: {{ team.raiting }}

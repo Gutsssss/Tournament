@@ -1,6 +1,8 @@
 <template>
   <div class="brawl-tournament-nav">
-    <router-link class="link" to="/"><img class="icon" :src="require('@/assets/iconLog.png')" /></router-link>
+    <router-link class="link" to="/"
+      ><img class="icon" :src="require('@/assets/iconLog.png')"
+    /></router-link>
     <ul>
       <li><router-link class="link" to="/">Home</router-link></li>
       <li><router-link class="link" to="/teams">Teams</router-link></li>
@@ -8,6 +10,7 @@
       <li>
         <router-link class="link" to="/registration">Registration</router-link>
       </li>
+      <li><router-link class="link" to="/bracket">Bracket</router-link></li>
     </ul>
   </div>
 </template>

@@ -4,6 +4,7 @@ import BrawlTournamentsHome from "./components/BrawlTournamentsHome.vue";
 import BrawlTournamentRegistration from "./components/BrawlTournamentRegistration.vue";
 import BrawlTournamentRaiting from "./components/BrawlTournamentRaiting.vue";
 import BrawlTournament404 from "./components/BrawlTournament404.vue"
+import TournamentBracket from './components/TournamentBracket.vue'
 
 const routes = [
     {
@@ -21,6 +22,9 @@ const routes = [
     {
     path: '/:pathMatch(.*)*', name:'404', component: BrawlTournament404
     },
+    {
+    path: '/bracket', component:TournamentBracket
+    }
 ]
 
 const router = createRouter({
