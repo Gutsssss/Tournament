@@ -3,7 +3,7 @@
     <router-link class="link" to="/"
       ><img class="icon" :src="require('@/assets/iconLog.png')"
     /></router-link>
-    <ul>
+    <ul v-show="adaptive">
       <li><router-link class="link" to="/">Home</router-link></li>
       <li><router-link class="link" to="/teams">Teams</router-link></li>
       <li><router-link class="link" to="/raiting">Raiting</router-link></li>
@@ -12,10 +12,15 @@
       </li>
       <li><router-link class="link" to="/bracket">Bracket</router-link></li>
     </ul>
+    <img @click="adaptive = !adaptive" class="burger" :src="require('@/assets/burger-nav.png')"/>
   </div>
 </template>
 
-<script></script>
+<script setup>
+import { ref } from 'vue';
+
+const adaptive = ref(true)
+</script>
 
 <style scoped>
 * {
@@ -51,11 +56,22 @@ li {
   float: left;
   padding: 15px;
 }
+.burger {
+  width: 45px;
+  height: 45px;
+  display: none;
+  margin-right: 15px;
+}
 .link {
   color: white;
   text-decoration: double;
 }
-/* li:hover {
-  background-color: gray;
-} */
+@media screen and (max-width:800px){
+ ul{
+  display: none;
+ }
+ .burger {
+  display: block;
+ }
+}
 </style>

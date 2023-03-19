@@ -19,7 +19,6 @@
       </div>
     </v-expand-transition>
   </v-card>
-  <svg-icon type="mdi" :path="path"></svg-icon>
 </template>
 
 <script>

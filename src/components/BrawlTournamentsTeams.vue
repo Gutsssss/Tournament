@@ -2,15 +2,9 @@
   <BrawlTournamentNav />
   <div class="brawl-tournamenst-teams">
     <h1>Teams</h1>
+    <div class="loading" v-if="loading"><img class="loading-icon" :src="require('@/assets/loading.gif')"/></div>
     <div class="brawl-tournamenst-teams__all-teams">
-      <!-- <div
-        class="brawl-tournamenst-teams__list"
-        v-for="team in teamsStore.teams"
-        :key="team.id"
-      >
-        <BrawlTournamentOnceTeam :team="team" />
-      </div> -->
-      <div v-for="team in teamsStore.teams"
+      <div v-for="team in teamsGet"
         :key="team.id">
       <TournamentCard :team="team"/>
     </div>
@@ -25,8 +19,19 @@ import BrawlTournamentNav from "./BrawlTournamentNav";
 import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
 import { useTeamsStore } from "@/stores/teamsStore";
 import TournamentCard from "./TournamentCard.vue";
-
+import { onMounted, computed } from "vue";
+import { storeToRefs } from "pinia";
 const teamsStore = useTeamsStore();
+
+const teamsGet = computed(() => {
+  return teamsStore.teams;
+})
+
+onMounted(() => {
+  teamsStore.fetchTeams()
+})
+
+const { loading} = storeToRefs(useTeamsStore())
 </script>
 <style scoped>
 * {
@@ -47,7 +52,11 @@ h1 {
 }
 .brawl-tournamenst-teams__all-teams {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row
+}
+.loading {
+  text-align: center;
 }
 </style>

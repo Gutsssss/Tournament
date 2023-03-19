@@ -1,12 +1,11 @@
 import { defineStore } from "pinia";
-// import axios from "axios";
+import {instance} from './instance'
 
 export const useTeamsStore = defineStore("teamsStore", {
   state: () => ({
     teams: [
-      { id: 1, teamName: "NaVi", captainName: "Simple", raiting: 1420,captainsTelegram: '@pipapupa' },
-      { id: 2, teamName: "VP", captainName: "S0mple", raiting: 501,captainsTelegram: '@pupapipa' },
     ],
+    loading:false
   }),
   getters: {
     getTeams(state) {
@@ -17,18 +16,23 @@ export const useTeamsStore = defineStore("teamsStore", {
     },
   },
   actions: {
-    addTeam(team) {
-      this.teams.push(team)
+    // addTeam(team) {
+    //   this.teams.push(team)
+    // },
+    async fetchTeams() {
+
+      this.loading = true
+      try {
+        const data = await instance.get('/teams')
+          this.teams = data.data
+          this.loading = false
+        }
+        catch (error) {
+          alert(error)
+          console.log(error)
+      }
     }
   }
 });
 
- // async fetchTeams() {
-    //   try {
-    //     const data = await axios.get("http://localhost:3000/teams");
-    //     this.teams = data.data;
-    //   } catch (error) {
-    //     alert(error);
-    //     console.log(error);
-    //   }
-    // },
+ 
