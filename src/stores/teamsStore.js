@@ -20,9 +20,9 @@ export const useTeamsStore = defineStore("teamsStore", {
     async addTeamsToList() {
       try {
         await instance.post('/teams',{
-            captainName: this.captainName,
-            captainsTelegram: this.cptainsTelegram,
-            teamName: this.teamName,
+            captainName: String,
+            captainsTelegram: String,
+            teamName: String,
             raiting: 0,
             id: Date.now()
         }).then(response => 
