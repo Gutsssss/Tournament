@@ -1,12 +1,67 @@
 {
   "teams": [
-    { "id": 1, "teamName": "NaVi", "captainName": "Simple","raiting": 1420,"captainsTelegram": "@pipapupa" },
-    { "id": 2, "teamName": "VP", "captainName": "S0mple","raiting": 520,"captainsTelegram": "@popapupa" },
-    { "id": 3, "teamName": "NaVi", "captainName": "Simple","raiting": 1420,"captainsTelegram": "@pipapupa" },
-    { "id": 4, "teamName": "VP", "captainName": "S0mple","raiting": 520,"captainsTelegram": "@popapupa" },
-    { "id": 5, "teamName": "NaVi", "captainName": "Simple","raiting": 1420,"captainsTelegram": "@pipapupa" },
-    { "id": 6, "teamName": "VP", "captainName": "S0mple","raiting": 520,"captainsTelegram": "@popapupa" },
-    { "id": 7, "teamName": "NaVi", "captainName": "Simple","raiting": 1420,"captainsTelegram": "@pipapupa" },
-    { "id": 8, "teamName": "VP", "captainName": "S0mple","raiting": 520,"captainsTelegram": "@popapupa" }
+    {
+      "id": 1,
+      "teamName": "NaVi",
+      "captainName": "Simple",
+      "raiting": 1420,
+      "captainsTelegram": "@pipapupa"
+    },
+    {
+      "id": 2,
+      "teamName": "VP",
+      "captainName": "S0mple",
+      "raiting": 520,
+      "captainsTelegram": "@popapupa"
+    },
+    {
+      "id": 3,
+      "teamName": "NaVi",
+      "captainName": "Simple",
+      "raiting": 1420,
+      "captainsTelegram": "@pipapupa"
+    },
+    {
+      "id": 4,
+      "teamName": "VP",
+      "captainName": "S0mple",
+      "raiting": 520,
+      "captainsTelegram": "@popapupa"
+    },
+    {
+      "id": 5,
+      "teamName": "NaVi",
+      "captainName": "Simple",
+      "raiting": 1420,
+      "captainsTelegram": "@pipapupa"
+    },
+    {
+      "id": 6,
+      "teamName": "VP",
+      "captainName": "S0mple",
+      "raiting": 520,
+      "captainsTelegram": "@popapupa"
+    },
+    {
+      "id": 7,
+      "teamName": "NaVi",
+      "captainName": "Simple",
+      "raiting": 1420,
+      "captainsTelegram": "@pipapupa"
+    },
+    {
+      "id": 8,
+      "teamName": "VP",
+      "captainName": "S0mple",
+      "raiting": 520,
+      "captainsTelegram": "@popapupa"
+    },
+    {
+      "captainName": "Hope",
+      "captainsTelegram": "@bimbam",
+      "teamName": "hopeTeam",
+      "raiting": 1000,
+      "id": 1679478154624
+    }
   ]
 }

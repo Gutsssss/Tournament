@@ -1,3 +1,4 @@
+
 import { defineStore } from "pinia";
 import {instance} from './instance'
 
@@ -16,11 +17,21 @@ export const useTeamsStore = defineStore("teamsStore", {
     },
   },
   actions: {
-    // addTeam(team) {
-    //   this.teams.push(team)
-    // },
+    async addTeamsToList() {
+      try {
+        await instance.post('/teams',{
+            captainName: this.captainName,
+            captainsTelegram: this.cptainsTelegram,
+            teamName: this.teamName,
+            raiting: 0,
+            id: Date.now()
+        }).then(response => 
+          console.log(response))
+      } catch(error) {
+        alert(error)
+      }
+    },
     async fetchTeams() {
-
       this.loading = true
       try {
         const data = await instance.get('/teams')

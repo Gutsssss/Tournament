@@ -13,7 +13,7 @@
         v-for="team in teamsStore.topRaiting"
         :key="team.id"
       >
-        <BrawlTournamentOnceTeam :team="team" />
+        <TournamentCard :team="team" />
       </div>
     </div>
   </div>
@@ -24,7 +24,10 @@
 import BrawlTournamentNav from "./BrawlTournamentNav.vue";
 import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
 import { useTeamsStore } from "@/stores/teamsStore";
-import BrawlTournamentOnceTeam from "./BrawlTournamentOnceTeam.vue";
+// import BrawlTournamentOnceTeam from "./BrawlTournamentOnceTeam.vue";
+import TournamentCard from "./TournamentCard.vue";
+import { onMounted} from "vue";
+
 
 const teamsStore = useTeamsStore();
 
@@ -38,6 +41,10 @@ function sortGreater() {
     return b.raiting - a.raiting;
   });
 }
+
+onMounted(() => {
+  teamsStore.fetchTeams()
+})
 </script>
 <style scoped>
 * {
