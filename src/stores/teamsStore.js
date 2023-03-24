@@ -1,12 +1,10 @@
-
 import { defineStore } from "pinia";
-import {instance} from './instance'
+import { instance } from "./instance";
 
 export const useTeamsStore = defineStore("teamsStore", {
   state: () => ({
-    teams: [
-    ],
-    loading:false
+    teams: [],
+    loading: false,
   }),
   getters: {
     getTeams(state) {
@@ -17,33 +15,31 @@ export const useTeamsStore = defineStore("teamsStore", {
     },
   },
   actions: {
-    async addTeamsToList() {
+    async addTeamsToList(captainName,teamName,captainsTelegram) {
       try {
-        await instance.post('/teams',{
-            captainName: String,
-            captainsTelegram: String,
-            teamName: String,
+         await instance
+          .post("/teams", {
+            "captainName":captainName._value,
+            "teamName":teamName._value,
+           "captainsTelegram":captainsTelegram._value,
             raiting: 0,
-            id: Date.now()
-        }).then(response => 
-          console.log(response))
-      } catch(error) {
-        alert(error)
+            id: Date.now(),
+          })
+          .then((response) => {console.log(response),alert('команда успешно создана')} );
+      } catch (error) {
+        alert(error);
       }
     },
     async fetchTeams() {
-      this.loading = true
+      this.loading = true;
       try {
-        const data = await instance.get('/teams')
-          this.teams = data.data
-          this.loading = false
-        }
-        catch (error) {
-          alert(error)
-          console.log(error)
+        const data = await instance.get("/teams");
+        this.teams = data.data;
+        this.loading = false;
+      } catch (error) {
+        alert(error);
+        console.log(error);
       }
-    }
-  }
+    },
+  },
 });
-
- 

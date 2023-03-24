@@ -2,15 +2,15 @@
   <BrawlTournamentNav />
   <div class="brawl-tournament-registration">
     <h1>Registation</h1>
-    <form class="brawl-tournament-registration-form" @submit.prevent="addTeam">
-      <input v-model="CaptainName" type="text" placeholder="Captain name" />
-      <input v-model="TeamName" type="text" placeholder="Team name" />
+    <form class="brawl-tournament-registration-form" @submit.prevent="">
+      <input v-model="newCaptainName" type="text" placeholder="Captain name" />
+      <input v-model="newTeamName" type="text" placeholder="Team name" />
       <input
-        v-model="CptainsTelegram"
+        v-model="newCptainsTelegram"
         type="text"
         placeholder="Captain's telegram"
       />
-      <button @click="createTeam">Submit</button>
+      <button @click="addTeam">Submit</button>
     </form>
   </div>
   <BrawlTournamentFooter />
@@ -25,11 +25,19 @@ import { ref } from "vue";
 
 const teamsStore = useTeamsStore();
 
-const CaptainName = ref("");
-const TeamName = ref("");
-const CptainsTelegram = ref("");
 
-const createTeam = teamsStore.addTeamsToList;
+
+const newCaptainName = ref("");
+const newTeamName = ref("");
+const newCptainsTelegram = ref(""); 
+
+
+
+const addTeam = () => teamsStore.addTeamsToList(
+  newCaptainName,
+  newCptainsTelegram,
+  newTeamName,
+)
 </script>
 
 <style scoped>
