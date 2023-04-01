@@ -1,7 +1,7 @@
 <template>
   <BrawlTournamentNav />
   <div class="brawl-tournament-raiting">
-    <h1>Raiting</h1>
+    <h1>Rating</h1>
     <div class="brawl-tournament-raiting__buttons">
       <button @click="sortGreater">Greater filter</button>
       <button @click="sortLess">Less filter</button>
@@ -21,11 +21,11 @@
 </template>
 
 <script setup>
-import BrawlTournamentNav from "./BrawlTournamentNav.vue";
-import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
+import BrawlTournamentNav from "@/components/molecules/BrawlTournamentNav.vue";
+import BrawlTournamentFooter from "@/components/molecules/BrawlTournamentFooter.vue";
 import { useTeamsStore } from "@/stores/teamsStore";
 // import BrawlTournamentOnceTeam from "./BrawlTournamentOnceTeam.vue";
-import TournamentCard from "./TournamentCard.vue";
+import TournamentCard from "@/components/molecules/TournamentCard.vue";
 import { onMounted} from "vue";
 
 

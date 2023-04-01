@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import BrawlTournamentsTeams from "./components/BrawlTournamentsTeams.vue";
-import BrawlTournamentsHome from "./components/BrawlTournamentsHome.vue";
-import BrawlTournamentRegistration from "./components/BrawlTournamentRegistration.vue";
-import BrawlTournamentRaiting from "./components/BrawlTournamentRaiting.vue";
-import BrawlTournament404 from "./components/BrawlTournament404.vue"
-import TournamentBracket from './components/TournamentBracket.vue'
+import BrawlTournamentsTeams from "./components/organisms/BrawlTournamentsTeams.vue";
+import BrawlTournamentsHome from "./components/organisms/BrawlTournamentsHome.vue";
+import BrawlTournamentRegistration from "./components/organisms/BrawlTournamentRegistration.vue";
+import BrawlTournamentRaiting from "./components/organisms/BrawlTournamentRaiting.vue";
+import BrawlTournament404 from "./components/molecules/BrawlTournament404.vue"
+import TournamentBracket from './components/organisms/TournamentBracket.vue'
 
 const routes = [
     {

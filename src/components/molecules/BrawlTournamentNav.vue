@@ -6,7 +6,7 @@
     <ul v-show="adaptive">
       <li><router-link class="link" to="/">Home</router-link></li>
       <li><router-link class="link" to="/teams">Teams</router-link></li>
-      <li><router-link class="link" to="/raiting">Raiting</router-link></li>
+      <li><router-link class="link" to="/raiting">Rating</router-link></li>
       <li>
         <router-link class="link" to="/registration">Registration</router-link>
       </li>

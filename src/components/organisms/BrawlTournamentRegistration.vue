@@ -2,41 +2,46 @@
   <BrawlTournamentNav />
   <div class="brawl-tournament-registration">
     <h1>Registation</h1>
-    <form class="brawl-tournament-registration-form" @submit.prevent="">
-      <input v-model="newCaptainName" type="text" placeholder="Captain name" />
-      <input v-model="newTeamName" type="text" placeholder="Team name" />
-      <input
+    <v-form class="brawl-tournament-registration-form" @submit.prevent="">
+      <v-text-field class="input" v-model="newCaptainName" type="text" label="Captain name" :rules="rules"/>
+      <v-text-field class="input" v-model="newTeamName" type="text" label="Team name" />
+      <v-text-field class="input"
         v-model="newCptainsTelegram"
         type="text"
-        placeholder="Captain's telegram"
+        label="Captain's telegram"
       />
-      <button @click="addTeam">Submit</button>
-    </form>
+      <v-btn class="btn" @click="addTeam">Submit</v-btn>
+    </v-form>
   </div>
   <BrawlTournamentFooter />
 </template>
 
 <script setup>
 import { useTeamsStore } from "@/stores/teamsStore";
-import BrawlTournamentNav from "./BrawlTournamentNav.vue";
-import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
+import BrawlTournamentNav from "@/components/molecules/BrawlTournamentNav.vue";
+import BrawlTournamentFooter from "@/components/molecules/BrawlTournamentFooter.vue";
 // import {  computed } from "vue";
 import { ref } from "vue";
 
 const teamsStore = useTeamsStore();
 
+const rules = [
+  value => {
+    if (value) return true
 
+    return "qwe"
+  }
+]
 
 const newCaptainName = ref("");
 const newTeamName = ref("");
-const newCptainsTelegram = ref(""); 
-
+const newCptainsTelegram = ref("");
 
 
 const addTeam = () => teamsStore.addTeamsToList(
-  newCaptainName,
-  newCptainsTelegram,
-  newTeamName,
+  newCaptainName.value,
+  newCptainsTelegram.value,
+  newTeamName.value,
 )
 </script>
 
@@ -62,7 +67,6 @@ h1 {
 }
 .brawl-tournament-registration-form {
   display: flex;
-  height: 100px;
   flex-direction: column;
   align-items: center;
   width: 400px;
@@ -72,11 +76,12 @@ h1 {
   border-radius: 20px;
   border: 2px solid white;
 }
-input {
-  width: 300px;
+.input {
   height: 50px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 20px;
+  width: 400px;
+  padding: 10px;
 }
 button {
   width: 300px;
@@ -88,5 +93,8 @@ button {
 }
 button:hover {
   background: rgb(77, 18, 28);
+}
+.btn {
+  margin-bottom: 10px;
 }
 </style>

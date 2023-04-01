@@ -14,11 +14,11 @@
 </template>
 
 <script setup>
-import BrawlTournamentNav from "./BrawlTournamentNav";
+import BrawlTournamentNav from "@/components/molecules/BrawlTournamentNav";
 // import BrawlTournamentOnceTeam from "@/components/BrawlTournamentOnceTeam.vue";
-import BrawlTournamentFooter from "./BrawlTournamentFooter.vue";
+import BrawlTournamentFooter from "@/components/molecules/BrawlTournamentFooter.vue";
 import { useTeamsStore } from "@/stores/teamsStore";
-import TournamentCard from "./TournamentCard.vue";
+import TournamentCard from "@/components/molecules/TournamentCard.vue";
 import { onMounted, computed } from "vue";
 import { storeToRefs } from "pinia";
 const teamsStore = useTeamsStore();
@@ -54,7 +54,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-direction: row
+  flex-direction: row;
+  padding-left: 10px;
 }
 .loading {
   text-align: center;

@@ -46,8 +46,8 @@
 </template>
 
 <script setup>
-import BrawlTournamentFooter from './BrawlTournamentFooter.vue';
-import BrawlTournamentNav from './BrawlTournamentNav.vue';
+import BrawlTournamentFooter from '@/components/molecules/BrawlTournamentFooter.vue';
+import BrawlTournamentNav from '@/components/molecules/BrawlTournamentNav.vue';
 </script>
 
 <style scoped>

@@ -19,10 +19,10 @@ export const useTeamsStore = defineStore("teamsStore", {
       try {
          await instance
           .post("/teams", {
-            "captainName":captainName._value,
-            "teamName":teamName._value,
-           "captainsTelegram":captainsTelegram._value,
-            raiting: 0,
+            "captainName":captainName,
+            "teamName":teamName,
+           "captainsTelegram":captainsTelegram,
+            rating: 0,
             id: Date.now(),
           })
           .then((response) => {console.log(response),alert('команда успешно создана')} );
