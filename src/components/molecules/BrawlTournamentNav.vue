@@ -7,10 +7,7 @@
       <li><router-link class="link" to="/">Home</router-link></li>
       <li><router-link class="link" to="/teams">Teams</router-link></li>
       <li><router-link class="link" to="/raiting">Rating</router-link></li>
-      <li>
-        <router-link class="link" to="/registration">Registration</router-link>
-      </li>
-      <li><router-link class="link" to="/bracket">Bracket</router-link></li>
+      <li><router-link class="link" to="/admin">Admin</router-link></li>
     </ul>
     <img @click="adaptive = !adaptive" class="burger" :src="require('@/assets/burger-nav.png')"/>
   </div>

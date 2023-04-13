@@ -11,7 +11,7 @@ export const useTeamsStore = defineStore("teamsStore", {
       return state.teams;
     },
     topRaiting() {
-      return this.teams.filter((teams) => teams.raiting > 500);
+      return this.teams.filter((teams) => teams.rating > 500);
     },
   },
   actions: {
@@ -41,5 +41,5 @@ export const useTeamsStore = defineStore("teamsStore", {
         console.log(error);
       }
     },
-  },
+  }
 });

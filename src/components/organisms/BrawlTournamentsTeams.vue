@@ -54,8 +54,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   padding-left: 10px;
+  gap: 0px;
 }
 .loading {
   text-align: center;

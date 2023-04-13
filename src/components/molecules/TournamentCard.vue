@@ -8,14 +8,14 @@
         class="tooltip"
         activator="parent"
         location="end"
-      >Raiting:{{ team.raiting }},Captain:{{ team.captainName }}</v-tooltip>
+      >Raiting:{{ team.rating }},Captain:{{ team.captainName }}</v-tooltip>
 
     <v-card-title class="title" :icon="show"
         @click="show = !show"
         color="white">
         {{ team.teamName }}
     </v-card-title>
-    <v-expand-transition>
+    <!-- <v-expand-transition>
       <div v-show="show">
         <v-divider></v-divider>
         <v-card-text>
@@ -23,7 +23,7 @@
           Raiting: {{ team.raiting }}
         </v-card-text>
       </div>
-    </v-expand-transition>
+    </v-expand-transition> -->
   </v-card>
 </template>
 

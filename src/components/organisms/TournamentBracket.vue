@@ -1,5 +1,4 @@
 <template>
-    <BrawlTournamentNav/>
     <section id="bracket">
 	<div class="container">
 	<div class="split split-one">
@@ -42,12 +41,9 @@
 	</div>
     </div>
     </section>
-    <BrawlTournamentFooter/>
 </template>
 
 <script setup>
-import BrawlTournamentFooter from '@/components/molecules/BrawlTournamentFooter.vue';
-import BrawlTournamentNav from '@/components/molecules/BrawlTournamentNav.vue';
 </script>
 
 <style scoped>
